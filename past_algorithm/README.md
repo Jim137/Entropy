@@ -43,14 +43,9 @@ In summary, cryptography plays a crucial role in securing communication and prot
 
 XOR (exclusive or) encryption is a type of symmetric encryption that involves bitwise operations on binary data. It works by combining a plaintext message with a secret key using the XOR operation, which produces a ciphertext. The same key is used for both encryption and decryption.
 
-<div class="info_block" align="center">
 
-**&#9432;XOR true table:**
-|       | 0   | 1   |
-| ----- | --- | --- |
-| **0** | 0   | 1   |
-| **1** | 1   | 0   |
-
+<div align="center">
+    <img src="../.github/xor.svg" width="300" height="300" alt="XOR true table">
 </div>
 
 ### How it works
@@ -141,16 +136,3 @@ DES is a well-known and widely used encryption algorithm that has been widely us
 In 1997, a machine was built that was able to brute-force a DES key in under a day, highlighting the need for stronger encryption methods. In response, the US government began promoting the use of Triple DES (3DES), which uses three iterations of DES with different keys to provide greater security.
 
 Today, DES is considered an obsolete encryption algorithm and is not recommended for use in new systems. However, it remains important for historical and educational purposes, as well as in legacy systems that have not yet been upgraded to more modern encryption methods.
-
-<!-- css style -->
-<style>
-    .success_block {
-    padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #3c763d; background-color: #dff0d8; border-color: #d6e9c6;
-}
-    .error_block {
-    padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #a94442; background-color: #f2dede; border-color: #ebccd1;
-}
-    .info_block {
-    padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #31708f; background-color: #d9edf7; border-color: #bce8f1;
-}
-</style>

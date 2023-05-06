@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="300" height="300">
+    <body class="success_block" xmlns="http://www.w3.org/1999/xhtml">
+        <h4 align="center"><b>&#9432;XOR true table</b></h4>
+      <table align="center">
+        <thead>
+            <th></th>
+            <th><b>0</b></th>
+            <th><b>1</b></th>
+        </thead>
+        <tr>
+            <td><b>0</b></td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td><b>1</b></td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+      </table>
+    </body>
+    <style>
+        .success_block {
+            padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #31708f; background-color: #d9edf7; border-color: #bce8f1; 
+            font-family:
+                system-ui,
+                -apple-system,
+                'Segoe UI',
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif,
+                'Apple Color Emoji',
+                'Segoe UI Emoji';
+        }
+        table,
+        th,
+        td {
+            overflow: hidden;
+	        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        th,
+        td {
+            padding: 15px;
+            background-color: rgba(255,255,255,0.2);
+            color: #000;
+        }
+        th:nth-child(1),
+        td:nth-child(1) {
+            border-right: solid 3px green;
+        }
+        th {
+            border-bottom: solid 3px green;
+        }
+    </style>
+  </foreignObject>
+</svg>
