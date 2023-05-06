@@ -6,7 +6,7 @@ Entropy of encrypted data
 ### *Disclaimer: Documentations in this project are partially written with the help of GPT.*
 
 ## Introduction
-This is a final project for the course, "Math Methods for Physicists" in National Tsing Hua University. The goal of this project is to study the entropy of encrypted data. 
+This is the final project for the course, "Math Methods for Physicists" in National Tsing Hua University. The goal of this project is to study the entropy of encrypted data. 
 
 In followings, I will introduce some basics concepts I will use in this project.
 
