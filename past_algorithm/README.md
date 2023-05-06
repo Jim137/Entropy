@@ -43,12 +43,15 @@ In summary, cryptography plays a crucial role in securing communication and prot
 
 XOR (exclusive or) encryption is a type of symmetric encryption that involves bitwise operations on binary data. It works by combining a plaintext message with a secret key using the XOR operation, which produces a ciphertext. The same key is used for both encryption and decryption.
 
-**XOR true table:**
+<div class="info_block" align="center">
+
+**&#9432;XOR true table:**
 |       | 0   | 1   |
 | ----- | --- | --- |
 | **0** | 0   | 1   |
 | **1** | 1   | 0   |
 
+</div>
 
 ### How it works
 XOR encryption works by comparing each bit in the plaintext message with the corresponding bit in the secret key. If the bits are the same, the resulting bit in the ciphertext is 0. If the bits are different, the resulting bit in the ciphertext is 1. This process is repeated for each bit in the message, producing a ciphertext that is the same length as the plaintext.
@@ -87,3 +90,67 @@ def xor_decrypt(ciphertext, key):
 
 ### Conclusion
 XOR encryption is a simple and fast method of symmetric encryption, but it is not as secure as modern encryption algorithms. It is vulnerable to known plaintext attacks and brute-force attacks, making it unsuitable for many applications that require strong security. However, it can be useful for simple tasks where security is not a major concern.
+
+## Data Encryption Standard (DES)
+The Data Encryption Standard (DES) is a symmetric key encryption algorithm that was developed in the 1970s by IBM and adopted by the US government as a standard for encrypting sensitive data. It is a block cipher that encrypts data in 64-bit blocks using a 56-bit key.
+
+### How it works
+DES works by dividing the plaintext message into 64-bit blocks and applying a series of mathematical operations to each block to produce the ciphertext. The same key is used for both encryption and decryption.
+
+#### Key Generation
+To generate the key, a 64-bit key is input to a key generation algorithm that produces 16 subkeys, each of which is 48 bits long. These subkeys are used in the encryption and decryption processes.
+
+#### Encryption
+The encryption process consists of 16 rounds, each of which uses a different subkey. Each round takes a 64-bit block of plaintext and produces a 64-bit block of ciphertext.
+
+1. Initial permutation: The plaintext block is permuted according to a fixed permutation table.
+2. Key mixing: The 64-bit block is divided into two 32-bit halves, and the right half is expanded to 48 bits using a fixed expansion table. The 48-bit result is XORed with the current subkey.
+3. Substitution: The 48-bit result is divided into eight 6-bit blocks, each of which is substituted using a different 8x6-bit substitution table (S-box). The result is a 32-bit block.
+4. Permutation: The 32-bit block is permuted according to a fixed permutation table.
+5. Swap: The left and right halves of the block are swapped.
+6. Repeat steps 2-5 for 15 more rounds, using a different subkey for each round.
+7. Final permutation: The resulting 64-bit block is permuted according to a fixed permutation table to produce the ciphertext block.
+
+#### Decryption
+The decryption process is the reverse of the encryption process. The ciphertext block is input, and the subkeys are used in reverse order to produce the plaintext block.
+
+1. Initial permutation: The ciphertext block is permuted according to a fixed permutation table.
+2. Key mixing: The 64-bit block is divided into two 32-bit halves, and the right half is expanded to 48 bits using a fixed expansion table. The 48-bit result is XORed with the last subkey.
+3. Substitution: The 48-bit result is divided into eight 6-bit blocks, each of which is substituted using a different 8x6-bit substitution table (S-box), in reverse order. The result is a 32-bit block.
+4. Permutation: The 32-bit block is permuted according to a fixed permutation table.
+5. Swap: The left and right halves of the block are swapped.
+6. Repeat steps 2-5 for 15 more rounds, using the subkeys in reverse order.
+7. Final permutation: The resulting 64-bit block is permuted according to a fixed permutation table to produce the plaintext block.
+
+### Advantages and disadvantages
+DES has some advantages and disadvantages:
+
+#### Advantages
+* Widely used and well-studied.
+* Relatively fast and efficient for its time.
+* Provides a reasonable level of security against attacks, especially with longer keys.
+  
+#### Disadvantages
+* Vulnerable to brute-force attacks, where an attacker tries every possible key until the correct one is found.
+* Uses a relatively short key, making it vulnerable to attacks using specialized hardware.
+* Has been replaced by more secure encryption algorithms, such as AES.
+
+### Conclusion
+DES is a well-known and widely used encryption algorithm that has been widely used for decades. However, due to its relatively short key length and vulnerability to brute-force attacks, it has been gradually replaced by newer and more secure encryption algorithms.
+
+In 1997, a machine was built that was able to brute-force a DES key in under a day, highlighting the need for stronger encryption methods. In response, the US government began promoting the use of Triple DES (3DES), which uses three iterations of DES with different keys to provide greater security.
+
+Today, DES is considered an obsolete encryption algorithm and is not recommended for use in new systems. However, it remains important for historical and educational purposes, as well as in legacy systems that have not yet been upgraded to more modern encryption methods.
+
+<!-- css style -->
+<style>
+    .success_block {
+    padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #3c763d; background-color: #dff0d8; border-color: #d6e9c6;
+}
+    .error_block {
+    padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #a94442; background-color: #f2dede; border-color: #ebccd1;
+}
+    .info_block {
+    padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #31708f; background-color: #d9edf7; border-color: #bce8f1;
+}
+</style>
