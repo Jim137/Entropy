@@ -138,3 +138,45 @@ In 1997, a machine was built that was able to brute-force a DES key in under a d
 Today, DES is considered an obsolete encryption algorithm and is not recommended for use in new systems. However, it remains important for historical and educational purposes, as well as in legacy systems that have not yet been upgraded to more modern encryption methods.
 
 ## RSA
+RSA (Rivest-Shamir-Adleman) is an asymmetric encryption algorithm widely used for secure communication, digital signatures, and key exchange. It was introduced in 1977 by Ron Rivest, Adi Shamir, and Leonard Adleman. RSA relies on the mathematical properties of prime numbers and modular arithmetic.
+
+### Key Generation
+RSA encryption involves generating a public key and a private key pair:
+
+1. Select two distinct prime numbers, p and q.
+2. Calculate the modulus, n, by multiplying p and q: n = p * q.
+3. Compute the totient function, φ(n), which represents the number of positive integers less than n that are coprime (having no common factors) with n: φ(n) = (p-1) * (q-1).
+4. Choose an integer, e, such that 1 < e < φ(n) and e is coprime with φ(n). This is the public exponent.
+5. Calculate the modular multiplicative inverse of e modulo φ(n) to find d, the private exponent: d ≡ e^(-1) (mod φ(n)).
+6. The public key consists of the modulus, n, and the public exponent, e.
+7. The private key consists of the modulus, n, and the private exponent, d.
+
+### Encryption
+To encrypt a message using RSA:
+
+1. Obtain the recipient's public key (modulus, n, and public exponent, e).
+2. Represent the message as an integer m, where m < n.
+3. Calculate the ciphertext, c, by computing c ≡ m^e (mod n).
+4. Transmit the ciphertext to the recipient.
+
+### Decryption
+To decrypt the ciphertext using RSA:
+
+1. Obtain the recipient's private key (modulus, n, and private exponent, d).
+2. Retrieve the ciphertext, c.
+3. Calculate the original message, m, by computing m ≡ c^d (mod n).
+
+### Security
+The security of RSA is based on the difficulty of factoring large integers into prime factors. The strength of RSA depends on the length of the key, typically measured in bits. A longer key size provides greater security but requires more computational resources.
+
+RSA is susceptible to attacks if the keys are not generated properly or if an attacker discovers a more efficient factoring algorithm. Thus, it is essential to use sufficiently large key sizes and follow best practices for key generation.
+
+### Applications
+RSA has various applications, including:
+
+* Secure communication: RSA encryption is used to establish secure channels for transmitting sensitive information over untrusted networks.
+* Digital signatures: RSA can generate and verify digital signatures, ensuring the authenticity and integrity of digital documents.
+* Key exchange: RSA allows two parties to securely exchange symmetric encryption keys, enabling secure communication using a faster symmetric algorithm.
+* Secure sockets layer (SSL) and transport layer security (TLS): RSA is used for secure web browsing and secure email communication.
+
+In summary, RSA is a widely adopted asymmetric encryption algorithm used for secure communication, digital signatures, and key exchange. It relies on the mathematical properties of prime numbers and modular arithmetic to provide security in various applications.
