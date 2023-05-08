@@ -136,3 +136,5 @@ DES is a well-known and widely used encryption algorithm that has been widely us
 In 1997, a machine was built that was able to brute-force a DES key in under a day, highlighting the need for stronger encryption methods. In response, the US government began promoting the use of Triple DES (3DES), which uses three iterations of DES with different keys to provide greater security.
 
 Today, DES is considered an obsolete encryption algorithm and is not recommended for use in new systems. However, it remains important for historical and educational purposes, as well as in legacy systems that have not yet been upgraded to more modern encryption methods.
+
+## RSA
