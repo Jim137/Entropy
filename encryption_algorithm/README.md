@@ -1,7 +1,12 @@
 # Cryptography
-### *Disclaimer: This is written with the help of GPT.*
+##### *Disclaimer: This is written with the help of GPT.*
 
 Cryptography is the practice of securing communication from third-party intruders by transforming the message into an unintelligible form. It involves techniques for encrypting and decrypting messages in such a way that only the intended recipient can read the original message.
+
+Contents:
+* [XOR Encryption](#xor-encryption)
+* [DES](#data-encryption-standard-des)
+* [RSA](#rsa)
 
 ## Encryption
 
