@@ -34,5 +34,33 @@ $$
 
 where $p(x_i)$ is the probability of the $i$-th symbol in the data, and $q(x_i)$ is the probability of the $i$-th symbol in the encrypted data.
 
+And the mutual information is defined as:
+
+$$
+I(X;Y) = D_{KL}(P(X,Y)||P(X)P(Y))
+$$
+
+where $P(X,Y)$ is the joint probability of $X$ and $Y$, and $P(X)P(Y)$ is the product of the marginal probabilities of $X$ and $Y$.
+
+### Conditional Entropy
+
+Conditional entropy is a measure of the amount of information needed to describe the outcome of a random variable $Y$ given that the value of another random variable $X$ is known. It is also known as the equivocation of $Y$ given $X$.
+
+The conditional entropy is defined as:
+
+$$
+H(Y|X) = -\sum_{i=1}^{n} p(x_i) \sum_{j=1}^{m} p(y_j|x_i) \log p(y_j|x_i)
+$$
+
+where $p(x_i)$ is the probability of the $i$-th symbol in the data, and $p(y_j|x_i)$ is the probability of the $j$-th symbol in the encrypted data given the $i$-th symbol in the data.
+
+### Relation between Entropy, Mutual Information, and Conditional Entropy
+
+There is a relation between entropy, mutual information, and conditional entropy:
+
+$$
+I(X;Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)
+$$
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
