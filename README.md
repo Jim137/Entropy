@@ -12,6 +12,9 @@ In followings, I will introduce some basics concepts I will use in this project.
 
 ---
 
+<details>
+<summary>Details about Information and Entropy</summary>
+
 ### Information
 
 [Information](https://en.wikipedia.org/wiki/Information) is a measure of the uncertainty of an outcome. It is related to the amount of data that is required to specify the outcome of an event. The more uncertain an outcome is, the more information is required to resolve uncertainty of the outcome.
@@ -68,13 +71,32 @@ $$
 
 where $p(x_i)$ is the probability of the $i$-th symbol in the data, and $p(y_j|x_i)$ is the probability of the $j$-th symbol in the encrypted data given the $i$-th symbol in the data.
 
-### Relation between Entropy, Mutual Information, and Conditional Entropy
+</details>
+
+### 1. Relation between Entropy, Mutual Information, and Conditional Entropy
 
 There is a relation between entropy, mutual information, and conditional entropy:
 
 $$
 I(X;Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)
 $$
+
+### 2. Encryption
+
+There are three elements in encryption: plaintext, ciphertext, and key. Plaintext is the original message. Ciphertext is the encrypted message. Key is the secret used to encrypt the plaintext. The encryption process is a function that maps the plaintext and key to the ciphertext. The decryption process is a function that maps the ciphertext and key to the plaintext.
+
+Firstly, we consider the single-bit encryption. To make sure that once we know the ciphertext and the key, we can recover the plaintext, the encryption function must be a bijection. The possible encryption functions are:
+
+$$
+f_1(0,0) = 0, f_1(0,1) = 1, f_1(1,0) = 1, f_1(1,1) = 0\\
+f_2(0,0) = 1, f_2(0,1) = 0, f_2(1,0) = 0, f_2(1,1) = 1
+$$
+
+$f_1$ is XOR encryption, and $f_2$ is XNOR encryption. They both have the characteristic that ciphertext is corresponding to both 0, 1; only once we know the key is, the plane text can be recovered. And in most of cases, we pick XOR encryption as the most basic encryption to bit-wise operation.
+
+Before we take account into multi-bits encryption, there are two important properties of the operation of a secure cipher identified by Shannon: [confusion and diffusion](https://en.wikipedia.org/wiki/Confusion_and_diffusion). Confusion means that the relationship between the ciphertext and the key must be complex and involved. Diffusion means that the statistical structure of the plaintext must be dissipated into long-range statistics of the ciphertext.
+
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
