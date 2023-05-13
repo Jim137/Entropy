@@ -50,7 +50,7 @@ XOR (exclusive or) encryption is a type of symmetric encryption that involves bi
 
 
 <div align="center">
-    <img src="../.github/xor.svg" width="300" height="300" alt="XOR true table">
+    <img src="../.github/svg/xor.svg" width="300" height="300" alt="XOR true table">
 </div>
 
 ### How it works
