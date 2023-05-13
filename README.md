@@ -10,6 +10,20 @@ This is the final project for the course, "Math Methods for Physicists" in Natio
 
 In followings, I will introduce some basics concepts I will use in this project.
 
+---
+
+### Information
+
+[Information](https://en.wikipedia.org/wiki/Information) is a measure of the uncertainty of an outcome. It is related to the amount of data that is required to specify the outcome of an event. The more uncertain an outcome is, the more information is required to resolve uncertainty of the outcome.
+
+The information is calculated using the [Shannon information](https://en.wikipedia.org/wiki/Information_(measure)). Shannon information is defined as:
+
+$$
+I(x_i) = -\log p(x_i)
+$$
+
+where $p(x_i)$ is the probability of the $i$-th symbol in the data.
+
 ### Entropy
 
 Entropy is a fundamental concept in information theory that quantifies the uncertainty or randomness associated with a random variable. It measures the average amount of information required to describe or encode an event or a set of outcomes.
