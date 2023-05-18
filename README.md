@@ -89,11 +89,11 @@ $f_1$ is XOR encryption, and $f_2$ is XNOR encryption. They both have the charac
 
 Before we take account into multi-bits encryption, there are two important properties of the operation of a secure cipher identified by Shannon: [confusion and diffusion](https://en.wikipedia.org/wiki/Confusion_and_diffusion). Confusion means that the relationship between the ciphertext and the key must be complex and involved. Diffusion means that the statistical structure of the plaintext must be dissipated into long-range statistics of the ciphertext.
 
-There are two common ways to achieve confusion and diffusion which are [Substitution-Permutation Network](https://en.wikipedia.org/wiki/Substitution%E2%80%93permutation_network)(SP-Network) and [Feistel Cipher](https://en.wikipedia.org/wiki/Feistel_cipher).
+There are two common ways to achieve confusion and diffusion which are [Substitution-Permutation Network](https://en.wikipedia.org/wiki/Substitution%E2%80%93permutation_network) (SP-Network) and [Feistel Cipher](https://en.wikipedia.org/wiki/Feistel_cipher).
 
 <details><summary>Details about SP-Network and Feistel Cipher</summary>
 
-1. **SP-Network** contains two main features: substitution and permutation. Substitution means that the plaintext is replaced by the ciphertext using a substitution table. Permutation means that the order of the bits in the ciphertext is changed. Finally, at each round, the round key is combined using XOR encryption and sends the results to next round.The SP-Network is illustrated as follows:
+1. **SP-Network** contains two main features: substitution and permutation. Substitution means that the plaintext is replaced by the ciphertext using a substitution table. Permutation means that the order of the bits in the ciphertext is changed. Finally, at each round, the round key is combined using XOR encryption and sends the results to next round. The SP-Network is illustrated as follows:
 
 <div align="center"><img style="background: white;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/SubstitutionPermutationNetwork2.png/360px-SubstitutionPermutationNetwork2.png"><p>A sketch of a SP-Network with 3 rounds. Cited from <a href="https://en.wikipedia.org/wiki/Substitution%E2%80%93permutation_network">wiki</a>.</p></div>
 
@@ -104,6 +104,21 @@ There are two common ways to achieve confusion and diffusion which are [Substitu
 </details>
 
 Based on these concepts, we have many kinds of algorithm to encrypt the data. We have an introduction about the most common encryption algorithm which is written with the help of GPT: [ClickMe!](./encryption_algorithm/README.md)
+
+We discuss above that the encryption is all about bit, or binary system. Now, if we have a basis set of the data, e.g.: $\lbrace 0, 1, 2, 3, 4, 5, 6, 7, 8, 9\rbrace$ or $\lbrace A, B, C, ..., Z\rbrace$, we still can use the index to map the basis set to the binary data, like Base64 encoding. For the N-bases system, we have 11 methods introduced by [Shannon in 1949](https://ieeexplore.ieee.org/document/6769090) to encrypt the data, including:
+1. [Simple Substitution Cipher](https://en.wikipedia.org/wiki/Substitution_cipher#Simple)
+2. [Transposition](https://en.wikipedia.org/wiki/Transposition_cipher)
+3. [Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
+4. [N-grams Substitution Cipher](https://jeremykun.com/2012/02/03/cryptanalysis-with-n-grams/)
+5. Single Mixed Alphabet Vigenère Cipher: A simple substitution followed by a Vigenère cipher.
+6. [Hill Cipher](https://en.wikipedia.org/wiki/Hill_cipher)
+7. [Playfair Cipher](https://en.wikipedia.org/wiki/Playfair_cipher)
+8. Multiple Mixed Alphabet Substitution: In this cipher there are a set of d simple substitutions which are used in sequence.
+9. [Autokey Cipher](https://en.wikipedia.org/wiki/Autokey_cipher) 
+10. [Fractional Ciphers](https://crypto.interactive-maths.com/fractionating-ciphers.html)
+11. Codes: In codes words (or sometimes syllables) are replaced by substitute letter groups. Sometimes a cipher of one kind or another is applied to the result.
+
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
