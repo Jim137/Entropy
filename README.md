@@ -97,7 +97,7 @@ There are two common ways to achieve confusion and diffusion which are [Substitu
 
 <div align="center"><img style="background: white;" src="./doc/png/360px-SubstitutionPermutationNetwork2.png"><p>A sketch of a SP-Network with 3 rounds. Cited from <a href="https://en.wikipedia.org/wiki/Substitution%E2%80%93permutation_network">wiki</a>.</p></div>
 
-1. **Feistel Cipher** use another way to realize confusion and diffusion. It splits the plaintext into two halves, and each round, the left half is XORed with the round key and then the result is sent to the round function. The output of the round function is XORed with the right half and then the result is sent to the next round. The Feistel Cipher is illustrated as follows:
+2. **Feistel Cipher** use another way to realize confusion and diffusion. It splits the plaintext into two halves, and each round, the left half is XORed with the round key and then the result is sent to the round function. The output of the round function is XORed with the right half and then the result is sent to the next round. The Feistel Cipher is illustrated as follows:
 
 <div align="center"><img style="background: white;" src="./doc/png/300px-Feistel_cipher_diagram_en.svg.png"><p>A sketch of a Feistel Cipher. Cited from <a href="https://en.wikipedia.org/wiki/Feistel_cipher">wiki</a>.</p></div>
 
