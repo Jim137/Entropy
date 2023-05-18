@@ -93,17 +93,17 @@ There are two common ways to achieve confusion and diffusion which are [Substitu
 
 <details><summary>Details about SP-Network and Feistel Cipher</summary>
 
-1. SP-Network contains two main features: substitution and permutation. Substitution means that the plaintext is replaced by the ciphertext using a substitution table. Permutation means that the order of the bits in the ciphertext is changed. Finally, at each round, the round key is combined using XOR encryption and sends the results to next round.The SP-Network is illustrated as follows:
+1. **SP-Network** contains two main features: substitution and permutation. Substitution means that the plaintext is replaced by the ciphertext using a substitution table. Permutation means that the order of the bits in the ciphertext is changed. Finally, at each round, the round key is combined using XOR encryption and sends the results to next round.The SP-Network is illustrated as follows:
 
 <div align="center"><img style="background: white;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/SubstitutionPermutationNetwork2.png/360px-SubstitutionPermutationNetwork2.png"><p>A sketch of a SP-Network with 3 rounds. Cited from <a href="https://en.wikipedia.org/wiki/Substitution%E2%80%93permutation_network">wiki</a>.</p></div>
 
-2. Feistel Cipher use another way to realize confusion and diffusion. It splits the plaintext into two halves, and each round, the left half is XORed with the round key and then the result is sent to the round function. The output of the round function is XORed with the right half and then the result is sent to the next round. The Feistel Cipher is illustrated as follows:
+2. **Feistel Cipher** use another way to realize confusion and diffusion. It splits the plaintext into two halves, and each round, the left half is XORed with the round key and then the result is sent to the round function. The output of the round function is XORed with the right half and then the result is sent to the next round. The Feistel Cipher is illustrated as follows:
 
 <div align="center"><img style="background: white;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Feistel_cipher_diagram_en.svg/300px-Feistel_cipher_diagram_en.svg.png"><p>A sketch of a Feistel Cipher. Cited from <a href="https://en.wikipedia.org/wiki/Feistel_cipher">wiki</a>.</p></div>
 
 </details>
 
-Based on these concepts, we have many kinds of algorithm to encrypt the data. We have an introduction about the most common encryption algorithm which is written with the help of GPT: [ClickMe](./encryption_algorithm/README.md).
+Based on these concepts, we have many kinds of algorithm to encrypt the data. We have an introduction about the most common encryption algorithm which is written with the help of GPT: [ClickMe!](./encryption_algorithm/README.md)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
