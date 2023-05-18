@@ -21,7 +21,7 @@ In followings, I will introduce some basics concepts I will use in this project.
 
 The information is calculated using the [Shannon information](https://en.wikipedia.org/wiki/Information_(measure)). Shannon information is defined as:
 
-<div align="center"><img style="background: white;" src=".github/svg/Do9eHEQh4T.svg"></div>
+<div align="center"><img style="background: white;" src="doc/svg/Do9eHEQh4T.svg"></div>
 
 where $p(x_i)$ is the probability of the $i$-th symbol in the data.
 
@@ -31,7 +31,7 @@ Entropy is a fundamental concept in information theory that quantifies the uncer
 
 The entropy is calculated using the [Shannon entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)). Shannon entropy is defined as:
 
-<div align="center"><img style="background: white;" src=".github/svg/XrVbG3suFo.svg"></div>
+<div align="center"><img style="background: white;" src="doc/svg/XrVbG3suFo.svg"></div>
 
 where $p(x_i)$ is the probability of the $i$-th symbol in the data.
 
@@ -41,13 +41,13 @@ where $p(x_i)$ is the probability of the $i$-th symbol in the data.
 
 The mutual information is calculated using the [Kullback-Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence). Kullback-Leibler divergence is defined as:
 
-<div align="center"><img style="background: white;" src=".github/svg/XUJQ24fqN2.svg"></div>
+<div align="center"><img style="background: white;" src="doc/svg/XUJQ24fqN2.svg"></div>
 
 where $p(x_i)$ is the probability of the $i$-th symbol in the data, and $q(x_i)$ is the probability of the $i$-th symbol in the encrypted data.
 
 And the mutual information is defined as:
 
-<div align="center"><img style="background: white;" src=".github/svg/l2qjm7JQsY.svg"></div>
+<div align="center"><img style="background: white;" src="doc/svg/l2qjm7JQsY.svg"></div>
 
 where $P(X,Y)$ is the joint probability of $X$ and $Y$, and $P(X)P(Y)$ is the product of the marginal probabilities of $X$ and $Y$.
 
@@ -57,7 +57,7 @@ where $P(X,Y)$ is the joint probability of $X$ and $Y$, and $P(X)P(Y)$ is the pr
 
 The conditional entropy is defined as:
 
-<div align="center"><img style="background: white;" src=".github/svg/dkBXaJHN8y.svg"></div>
+<div align="center"><img style="background: white;" src="doc/svg/dkBXaJHN8y.svg"></div>
 
 where $p(x_i)$ is the probability of the $i$-th symbol in the data, and $p(y_j|x_i)$ is the probability of the $j$-th symbol in the encrypted data given the $i$-th symbol in the data.
 
