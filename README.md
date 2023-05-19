@@ -105,7 +105,9 @@ There are two common ways to achieve confusion and diffusion which are [Substitu
 
 Based on these concepts, we have many kinds of algorithm to encrypt the data. We have an introduction about the most common encryption algorithm which is written with the help of GPT: [ClickMe!](./encryption_algorithm/README.md)
 
-We discuss above that the encryption is all about bit, or binary system. Now, if we have a basis set of the data, e.g.: $\lbrace 0, 1, 2, 3, 4, 5, 6, 7, 8, 9\rbrace$ or $\lbrace A, B, C, ..., Z\rbrace$, we still can use the index to map the basis set to the binary data, like Base64 encoding. For the N-bases system, we have 11 methods introduced by [Shannon in 1949](https://ieeexplore.ieee.org/document/6769090) to encrypt the data, including:
+We discuss above that the encryption is all about bit, or binary system. Now, if we have a basis set of the data, e.g.: $\lbrace 0, 1, 2, 3, 4, 5, 6, 7, 8, 9\rbrace$ or $\lbrace A, B, C, ..., Z\rbrace$, we still can use the index to map the basis set to the binary data, like Base64 encoding. For the N-bases system, we have 11 methods introduced by [Shannon in 1949](https://ieeexplore.ieee.org/document/6769090) to encrypt the data, 
+<details><summary>including:</summary>
+
 1. [Simple Substitution Cipher](https://en.wikipedia.org/wiki/Substitution_cipher#Simple)
 2. [Transposition](https://en.wikipedia.org/wiki/Transposition_cipher)
 3. [Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
@@ -117,6 +119,8 @@ We discuss above that the encryption is all about bit, or binary system. Now, if
 9. [Autokey Cipher](https://en.wikipedia.org/wiki/Autokey_cipher) 
 10. [Fractional Ciphers](https://crypto.interactive-maths.com/fractionating-ciphers.html)
 11. Codes: In codes words (or sometimes syllables) are replaced by substitute letter groups. Sometimes a cipher of one kind or another is applied to the result.
+
+</details>
 
 To make it clear, we have to construct a function mapping the plaintext with the key to ciphertext as shwon in the following form:
 
