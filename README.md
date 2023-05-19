@@ -118,6 +118,40 @@ We discuss above that the encryption is all about bit, or binary system. Now, if
 10. [Fractional Ciphers](https://crypto.interactive-maths.com/fractionating-ciphers.html)
 11. Codes: In codes words (or sometimes syllables) are replaced by substitute letter groups. Sometimes a cipher of one kind or another is applied to the result.
 
+To make it clear, we have to construct a function mapping the plaintext with the key to ciphertext as shwon in the following form:
+
+$$
+f: \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace \times \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace \rightarrow \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace
+$$
+
+which $f$ needs to satisfy the following properties:
+1. $f$ is a bijection.
+2. Ciphertext must correspond to every element in the basis set. That without the key, we cannot recover the plaintext.
+
+Given a 3 elements basis set $\lbrace A, B, C\rbrace$, we have $3!2! = 12$ possible encryption functions, one of them is:
+
+| $f$     | $A$ | $B$ | $C$ |
+| ------- | --- | --- | --- |
+| **$A$** | $A$ | $B$ | $C$ |
+| **$B$** | $B$ | $C$ | $A$ |
+| **$C$** | $C$ | $A$ | $B$ |
+
+And a general form of encryption function can be represented as:
+
+$$
+c_i = f(p_i, k_i) = a\cdot p_i + b\cdot k_i + c \mod N
+$$
+
+where $a, b, c$ are integers, $N$ is the number of elements in the basis set, $p_i$ is the plaintext, $k_i$ is the key, and $c_i$ is the ciphertext. And the decryption function is:
+
+$$
+p_i = f^{-1}(c_i, k_i) = a\cdot p_i + b\cdot k_i + c \mod N
+$$
+
+where we can see that $f = f^{1}$, in this case, $f$ is so-called symmetric encryption. 
+
+To realized the perfect secrecy in this way, we need to have a [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) (OTP), which has been proved mathematically that it can achieve perfect secrecy and quantum resistance. However, it still have restrictions in the practical application, such as pre-shared key, key length, and key distribution (P.S. [Quantum Key Distribution](https://en.wikipedia.org/wiki/Quantum_key_distribution) (QKD) may be helpful in OTP.)
+
 
 
 ## License
