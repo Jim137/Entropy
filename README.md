@@ -118,6 +118,46 @@ We discuss above that the encryption is all about bit, or binary system. Now, if
 10. [Fractional Ciphers](https://crypto.interactive-maths.com/fractionating-ciphers.html)
 11. Codes: In codes words (or sometimes syllables) are replaced by substitute letter groups. Sometimes a cipher of one kind or another is applied to the result.
 
+To make it clear, we have to construct a function mapping the plaintext with the key to ciphertext as shwon in the following form:
+
+$$
+f: \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace \times \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace \rightarrow \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace
+$$
+
+which $f$ needs to satisfy the following properties:
+1. $f$ is a bijection.
+2. Ciphertext must correspond to every element in the basis set. That without the key, we cannot recover the plaintext.
+
+Given a 3 elements basis set $\lbrace A, B, C\rbrace$, we have $3!2! = 12$ possible encryption functions, one of them is:
+
+| $f$     | $A$ | $B$ | $C$ |
+| ------- | --- | --- | --- |
+| **$A$** | $A$ | $B$ | $C$ |
+| **$B$** | $B$ | $C$ | $A$ |
+| **$C$** | $C$ | $A$ | $B$ |
+
+And a general form of encryption function can be represented as:
+
+$$
+c_i = f(p_i, k_i) = a\cdot p_i + b\cdot k_i + c \mod N
+$$
+
+where $a, b, c$ are integers, $N$ is the number of elements in the basis set, $p_i$ is the plaintext, $k_i$ is the key, and $c_i$ is the ciphertext. And the decryption function is:
+
+$$
+p_i = f^{-1}(c_i, k_i) = a\cdot p_i + b\cdot k_i + c \mod N
+$$
+
+where we can see that $f = f^{1}$, in this case, $f$ is so-called symmetric encryption. 
+
+To realized the perfect secrecy in this way, we need to have a [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) (OTP), which has been proved mathematically that it can achieve perfect secrecy and quantum resistance. However, it still have restrictions in the practical application, such as pre-shared key, key length, and key distribution (P.S. [Quantum Key Distribution](https://en.wikipedia.org/wiki/Quantum_key_distribution) (QKD) may be helpful in OTP.)
+
+Nowadays, what we usually use in daily communication is the asymmetric encryption (as known as Public-key cryptography), such like [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)), [Elliptic Curve Cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) (ECC) and so on. In this case, we have two keys, one is public key, and the other is private key. The public key is used to encrypt the data, and the private key is used to decrypt the data. The public key is usually published to the public, and the private key is only known by the owner. 
+
+The encryption function and decryption function now will no longer be a linear function as symmetric one, but a nonlinear function. The encryption function is usually a trapdoor function, which is easy to compute in one direction, but hard to compute in the opposite direction without the private key. Therefore, we can use asymmetric encryption to exchange the symmetric key, and then use the symmetric encryption to encrypt the data.
+
+However, it has been proved that RSA is not quantum resistant, which means that the quantum computer can break the RSA in polynomial time with [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm). And now, we have [Post-quantum cryptography](https://en.wikipedia.org/wiki/Post-quantum_cryptography) (PQC) to resist the attack from both classical and quantum computer.
+
 
 
 ## License
