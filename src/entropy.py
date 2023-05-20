@@ -1,7 +1,7 @@
 import numpy as np
 from typing import Union
 
-from utils.basis_get import basis_get
+from .utils.basis_get import basis_get
 
 
 def entropy(

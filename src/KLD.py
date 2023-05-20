@@ -1,7 +1,7 @@
 import numpy as np
 from typing import Union
 
-from utils.basis_get import basis_get
+from .utils.basis_get import basis_get
 
 
 def KLD(
@@ -27,6 +27,7 @@ def KLD(
     div:    float
             The Kullback-Leibler divergence of given dataX and dataY.
     """
+    
     for data in [dataX, dataY]:
         if type(data) is bytes:
             data = list(data)
@@ -51,6 +52,6 @@ def KLD(
 
 
 if __name__ == "__main__":
-    dataX = "hello world"
-    dataY = "wheel rolled"
+    dataX = b"hello world"
+    dataY = b"wheel rolled"
     print(KLD(dataX, dataY))
