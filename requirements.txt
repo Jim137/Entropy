@@ -1,3 +1,4 @@
 cryptography
 numpy
 base64
+scikit-metrics
