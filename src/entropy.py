@@ -28,6 +28,8 @@ def entropy(
 
     if type(data) is bytes:
         data = list(data)
+    elif type(data) is list or type(data) is tuple:
+        pass
     elif type(data) is not str:
         data = str(data)
 
