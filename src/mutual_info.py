@@ -2,14 +2,11 @@ import numpy as np
 from typing import Union
 from sklearn.metrics import mutual_info_score
 
-from utils.basis_get import basis_get
-
 
 def mutual_info(
     dataX: Union[str, bytes, list, tuple],
     dataY: Union[str, bytes, list, tuple],
     base=2,
-    basis_dict: Union[set, list, tuple, None] = None,
 ):
     """
     Return the mutual information of given dataX and dataY.
