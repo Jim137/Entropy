@@ -52,7 +52,7 @@ def mutual_info(
         print("The length of dataX and dataY should be equal.")
         return None
 
-    mi = mutual_info_score(x, y)
+    mi = mutual_info_score(x, y) / np.log(base)
     return mi
 
 
