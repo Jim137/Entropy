@@ -1,8 +1,8 @@
 import numpy as np
 from typing import Union
 
-from mutual_info import mutual_info
-from entropy import entropy
+from .mutual_info import mutual_info
+from .entropy import entropy
 
 
 def con_entropy(
