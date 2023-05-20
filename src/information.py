@@ -1,15 +1,7 @@
 import numpy as np
 from typing import Union
 
-
-def _basis_get(data) -> list:
-    "Get the basis of the data."
-
-    basis_dict = []
-    for char in data:
-        if char not in basis_dict:
-            basis_dict.append(char)
-    return basis_dict
+from utils.basis_get import basis_get
 
 
 def information(
@@ -40,7 +32,7 @@ def information(
         data = str(data)
 
     if basis_dict is None:
-        basis_dict = _basis_get(data)
+        basis_dict = basis_get(data)
 
     prob_list = []
     for item in basis_dict:
@@ -49,3 +41,7 @@ def information(
     for prob in prob_list:
         information -= np.log(prob) / np.log(base)
     return information
+
+if __name__ == "__main__":
+    data = b"Hello World!"
+    print(information(data))
