@@ -5,7 +5,7 @@ from utils.basis_get import basis_get
 
 
 def information(
-    data: Union[str, bytes, set, list, tuple],
+    data: Union[str, bytes, list, tuple],
     base=2,
     basis_dict: Union[set, list, tuple, None] = None,
 ) -> float:
