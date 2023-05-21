@@ -164,5 +164,10 @@ However, it has been proved that RSA is not quantum resistant, which means that 
 
 
 
+## References
+
+* [C. E. Shannon, "Communication theory of secrecy systems," in *The Bell System Technical Journal*, vol. 28, no. 4, pp. 656-715, Oct. 1949, doi: 10.1002/j.1538-7305.1949.tb00928.x.](https://ieeexplore.ieee.org/document/6769090)
+* [C. E. Shannon, "A mathematical theory of communication," in *The Bell System Technical Journal*, vol. 27, no. 3, pp. 379-423, July 1948, doi: 10.1002/j.1538-7305.1948.tb01338.x.](https://ieeexplore.ieee.org/document/6773024)
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
