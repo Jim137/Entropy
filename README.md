@@ -162,6 +162,14 @@ The encryption function and decryption function now will no longer be a linear f
 
 However, it has been proved that RSA is not quantum resistant, which means that the quantum computer can break the RSA in polynomial time with [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm). And now, we have [Post-quantum cryptography](https://en.wikipedia.org/wiki/Post-quantum_cryptography) (PQC) to resist the attack from both classical and quantum computer.
 
+## Methods
+
+The details of the methods can be found in the [entropy_of_encrypted.ipynb](./entropy_of_encrypted.ipynb).
+
+---
+
+We constructed a 4-bits XOR cipher as an example to show how to calculate the entropy of the encrypted data, mutual information and conditional entropy to show the relation of plaintext, key and ciphertext. 
+
 
 
 ## References
