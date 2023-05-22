@@ -41,6 +41,8 @@ def entropy(
         prob_list.append(data.count(item) / len(data))
     entropy = 0
     for prob in prob_list:
+        if prob == 0:
+            continue
         entropy -= prob * np.log(prob) / np.log(base)
     return entropy
 

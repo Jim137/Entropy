@@ -39,6 +39,8 @@ def information(
         prob_list.append(data.count(item) / len(data))
     information = 0
     for prob in prob_list:
+        if prob == 0:
+            continue
         information -= np.log(prob) / np.log(base)
     return information
 
