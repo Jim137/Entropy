@@ -170,6 +170,20 @@ In addition, to show the fractal structure of XOR encryption, we also constructe
 
 The details of the methods can be found in the [entropy_of_encrypted.ipynb](./entropy_of_encrypted.ipynb).
 
+## Results
+
+Firstly, we consider the 4-bits cipher. The following figure shows the ciphertext as the result of XOR operation between plaintext and key. We can see that the ciphertext is equally distributed to every element in the basis set.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_cipher.png"><p>4-Bits Ciphertext Heat Map</p></div>
+
+And to calculate the properties of information theory in the following, we made a bar plot of the entropy in 4-bits basis set. In the figure, we can see that for the number of 0 and 1 is equal, the entropy is the maximum. And the entropy is the minimum when all the bits are 0 or 1.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_entropy.png"><p>4-Bits Entropy Bar Plot</p></div>
+
+The entropy of the ciphertext is showed in the following figure. It turns into a four-fold symmetry instead of a fractal structure.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_cipher_entropy.png"><p>4-Bits Entropy of Ciphertext Heat Map</p></div>
+
 
 
 ## References
