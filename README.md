@@ -8,7 +8,7 @@ Entropy of encrypted data
 ## Introduction
 This is the final project for the course, "Math Methods for Physicists" in National Tsing Hua University. The goal of this project is to study the entropy of encrypted data. 
 
-In followings, I will introduce some basics concepts I will use in this project.
+In followings, I will introduce some basics concepts used in this project.
 
 ---
 
@@ -164,11 +164,11 @@ However, it has been proved that RSA is not quantum resistant, which means that 
 
 ## Methods
 
-The details of the methods can be found in the [entropy_of_encrypted.ipynb](./entropy_of_encrypted.ipynb).
-
----
-
 We constructed a 4-bits XOR cipher as an example to show how to calculate the entropy of the encrypted data, mutual information and conditional entropy to show the relation of plaintext, key and ciphertext. 
+
+In addition, to show the fractal structure of XOR encryption, we also constructed 10-bits and 7-bits XOR cipher.
+
+The details of the methods can be found in the [entropy_of_encrypted.ipynb](./entropy_of_encrypted.ipynb).
 
 
 
