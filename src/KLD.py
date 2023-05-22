@@ -47,6 +47,8 @@ def KLD(
 
     div = 0
     for i in range(len(probX)):
+        if probX[i] == 0:
+            continue
         div += probX[i] * np.log(probX[i] / probY[i]) / np.log(base)
     return div
 

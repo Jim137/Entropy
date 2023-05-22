@@ -8,7 +8,7 @@ Entropy of encrypted data
 ## Introduction
 This is the final project for the course, "Math Methods for Physicists" in National Tsing Hua University. The goal of this project is to study the entropy of encrypted data. 
 
-In followings, I will introduce some basics concepts I will use in this project.
+In followings, I will introduce some basics concepts used in this project.
 
 ---
 
@@ -164,11 +164,25 @@ However, it has been proved that RSA is not quantum resistant, which means that 
 
 ## Methods
 
+We constructed a 4-bits XOR cipher as an example to show how to calculate the entropy of the encrypted data, mutual information and conditional entropy to show the relation of plaintext, key and ciphertext. 
+
+In addition, to show the fractal structure of XOR encryption, we also constructed 10-bits and 7-bits XOR cipher.
+
 The details of the methods can be found in the [entropy_of_encrypted.ipynb](./entropy_of_encrypted.ipynb).
 
----
+## Results
 
-We constructed a 4-bits XOR cipher as an example to show how to calculate the entropy of the encrypted data, mutual information and conditional entropy to show the relation of plaintext, key and ciphertext. 
+Firstly, we consider the 4-bits cipher. The following figure shows the ciphertext as the result of XOR operation between plaintext and key. We can see that the ciphertext is equally distributed to every element in the basis set.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_cipher.png"><p>4-Bits Ciphertext Heat Map</p></div>
+
+And to calculate the properties of information theory in the following, we made a bar plot of the entropy in 4-bits basis set. In the figure, we can see that for the number of 0 and 1 is equal, the entropy is the maximum. And the entropy is the minimum when all the bits are 0 or 1.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_entropy.png"><p>4-Bits Entropy Bar Plot</p></div>
+
+The entropy of the ciphertext is showed in the following figure. It turns into a four-fold symmetry instead of a fractal structure.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_cipher_entropy.png"><p>4-Bits Entropy of Ciphertext Heat Map</p></div>
 
 
 
