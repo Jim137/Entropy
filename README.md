@@ -174,6 +174,8 @@ The details of the methods can be found in the [entropy_of_encrypted.ipynb](./en
 
 ## Results
 
+*Note: the base of logarithm we used is 2 which represents the unit of entropy is bit.*
+
 To start with the 4-bits cipher, the following figure shows the ciphertext as the result of XOR operation between plaintext and key. We can see that the ciphertext is equally distributed to every element in the basis set.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_cipher.png"><p>4-Bits Ciphertext Heat Map</p></div>
@@ -186,7 +188,7 @@ The entropy of the ciphertext is showed in the following figure. It turns into a
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_cipher_entropy.png"><p>4-Bits Entropy of Ciphertext Heat Map</p></div>
 
-Then the mutual information between C, P and C, K are shown in the followings. We can see that they are a quarter turn to each other.
+Then the mutual information between C, P and C, K are shown in the followings. We can see that they are a quarter turn to each other. And also, the mutual information between C, P and C, K are small in most of the part, which means that the corelation between the ciphertext and the plaintext or key is weak.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_icp.png"><img style="background: white;" src="./doc/png/4bits_ick.png"><p>4-Bits Mutual Information between C, P and C, K</p></div>
 
@@ -194,9 +196,20 @@ With [Eqn. (1)](#eqn1), we can calculate the conditional entropy in the 4 kinds 
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_hcp.png"><img style="background: white;" src="./doc/png/4bits_hck.png"><p>Conditional Entropy of Ciphertext when Plaintext or Key is Known</p></div>
 
-And when the ciphertext is known, the conditional entropy of plaintext and key are shown in the followings. We can see that the conditional entropy of plaintext and key are the same, which means that the plaintext and key are independent to each other.
+And when the ciphertext is known, the conditional entropy of plaintext and key are shown in the followings. We can see that the conditional entropy of plaintext and key are the same, which means that the plaintext and the key are as well as hard to recover.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_hpc.png"><img style="background: white;" src="./doc/png/4bits_hkc.png"><p>Conditional Entropy of Plaintext and Key when Ciphertext is Known</p></div>
+
+And we can compare the average entropy of 4-bits cipher and 8-bits cipher. We assume that the probability of each states (bits combination) is the same, and we know that the entropy of binary distribution is in the interval of 0 and 1 bit. The result is shown in below table.
+
+| Bits  | $\langle H_{Basis}\rangle$ | $\langle H_{Cipher}\rangle$ | $\langle H(P\|C)\rangle$ = $\langle H(K\|C)\rangle$ |
+| :---: | :------------------------: | :-------------------------: | :-------------------------------------------------: |
+|   4   |           0.7806           |           0.7806            |                       0.5434                        |
+|   8   |           0.9024           |           0.9024            |                       0.7788                        |
+
+We found that for equidistributed keys, the average entropy of ciphertexts is same as the average entropy of basis set. However, once we know the ciphertext, the average entropy (conditional entropy) of plaintexts and keys will be lowered down.
+
+That sounds weird, since we encrypt the data, it should be more random and the entropy should be increased. But the result shows that the entropy of plaintext and key are decreased. The reason is that the plaintext should not be equidistributed! The plaintext we want to send must be meaningful and full of "information". Therefore, if we implement the random distributed key on it, it will make the ciphertext random instead keeping the regularity of plaintext, which results in the increase of the entropy of ciphertext from plaintext.
 
 
 
