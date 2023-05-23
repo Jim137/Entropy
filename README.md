@@ -166,7 +166,7 @@ However, it has been proved that RSA is not quantum resistant, which means that 
 
 We constructed a 4-bits XOR cipher as an example to show how to calculate the entropy of the encrypted data, mutual information and conditional entropy to show the relation of plaintext, key and ciphertext. 
 
-In addition, to show the fractal structure of XOR encryption, we also constructed 10-bits and 7-bits XOR cipher.
+In addition, to show the fractal structure of XOR encryption, we also constructed 10-bits and 8-bits XOR cipher.
 
 The details of the methods can be found in the [entropy_of_encrypted.ipynb](./entropy_of_encrypted.ipynb).
 
