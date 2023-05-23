@@ -67,8 +67,10 @@ where $p(x_i)$ is the probability of the $i$-th symbol in the data, and $p(y_j|x
 
 There is a relation between entropy, mutual information, and conditional entropy:
 
+<div id='eqn1'></div>
+
 $$
-I(X;Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)
+I(X;Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)\tag{1}
 $$
 
 ### 2. Encryption
@@ -184,9 +186,17 @@ The entropy of the ciphertext is showed in the following figure. It turns into a
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_cipher_entropy.png"><p>4-Bits Entropy of Ciphertext Heat Map</p></div>
 
-Then the mutual information between C, P and C, K are shown in the followings.
+Then the mutual information between C, P and C, K are shown in the followings. We can see that they are a quarter turn to each other.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_icp.png"><img style="background: white;" src="./doc/png/4bits_ick.png"><p>4-Bits Mutual Information between C, P and C, K</p></div>
+
+With [Eqn. (1)](#eqn1), we can calculate the conditional entropy in the 4 kinds of relation. Let's see when the plaintext or key is known and how the conditional entropy that ciphertexts have. Based on the mutual information we get, there are cross-like pattern on it and have a quarter turn to each other.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_hcp.png"><img style="background: white;" src="./doc/png/4bits_hck.png"><p>Conditional Entropy of Ciphertext when Plaintext or Key is Known</p></div>
+
+And when the ciphertext is known, the conditional entropy of plaintext and key are shown in the followings. We can see that the conditional entropy of plaintext and key are the same, which means that the plaintext and key are independent to each other.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_hpc.png"><img style="background: white;" src="./doc/png/4bits_hkc.png"><p>Conditional Entropy of Plaintext and Key when Ciphertext is Known</p></div>
 
 
 
