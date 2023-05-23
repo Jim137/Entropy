@@ -107,7 +107,7 @@ There are two common ways to achieve confusion and diffusion which are [Substitu
 
 Based on these concepts, we have many kinds of algorithm to encrypt the data. We have an introduction about the most common encryption algorithm which is written with the help of GPT: [ClickMe!](./encryption_algorithm/README.md)
 
-We discuss above that the encryption is all about bit, or binary system. Now, if we have a basis set of the data, e.g.: $\lbrace 0, 1, 2, 3, 4, 5, 6, 7, 8, 9\rbrace$ or $\lbrace A, B, C, ..., Z\rbrace$, we still can use the index to map the basis set to the binary data, like Base64 encoding. For the N-bases system, we have 11 methods introduced by [Shannon in 1949](https://ieeexplore.ieee.org/document/6769090) to encrypt the data, 
+All we have discussed above is that the encryption is about bit or binary system. Now, if we have a basis set of the data, e.g.: $\lbrace 0, 1, 2, 3, 4, 5, 6, 7, 8, 9\rbrace$ or $\lbrace A, B, C, ..., Z\rbrace$, we still can use the index to map the basis set to the binary data, like Base64 encoding. For the N-bases system, we have 11 methods introduced by [Shannon in 1949](https://ieeexplore.ieee.org/document/6769090) to encrypt the data, 
 <details><summary>including:</summary>
 
 1. [Simple Substitution Cipher](https://en.wikipedia.org/wiki/Substitution_cipher#Simple)
