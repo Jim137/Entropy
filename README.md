@@ -13,7 +13,7 @@ In followings, I will introduce some basics concepts used in this project.
 ---
 
 <details>
-<summary>Details about Information and Entropy</summary>
+<summary>Details about important properties in information theory</summary>
 
 ### Information
 
@@ -122,7 +122,7 @@ We discuss above that the encryption is all about bit, or binary system. Now, if
 
 </details>
 
-To make it clear, we have to construct a function mapping the plaintext with the key to ciphertext as shwon in the following form:
+To make it clear, we can construct a function mapping the plaintext with the key to ciphertext as shwon in the following form:
 
 $$
 f: \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace \times \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace \rightarrow \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace
@@ -132,7 +132,7 @@ which $f$ needs to satisfy the following properties:
 1. $f$ is a bijection.
 2. Ciphertext must correspond to every element in the basis set. That without the key, we cannot recover the plaintext.
 
-Given a 3 elements basis set $\lbrace A, B, C\rbrace$, we have $3!2! = 12$ possible encryption functions, one of them is:
+Given a 3-elements basis set $\lbrace A, B, C\rbrace$, we have $3!2! = 12$ possible encryption functions, one of them is:
 
 | $f$     | $A$ | $B$ | $C$ |
 | ------- | --- | --- | --- |
@@ -172,11 +172,11 @@ The details of the methods can be found in the [entropy_of_encrypted.ipynb](./en
 
 ## Results
 
-Firstly, we consider the 4-bits cipher. The following figure shows the ciphertext as the result of XOR operation between plaintext and key. We can see that the ciphertext is equally distributed to every element in the basis set.
+To start with the 4-bits cipher, the following figure shows the ciphertext as the result of XOR operation between plaintext and key. We can see that the ciphertext is equally distributed to every element in the basis set.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_cipher.png"><p>4-Bits Ciphertext Heat Map</p></div>
 
-And to calculate the properties of information theory in the following, we made a bar plot of the entropy in 4-bits basis set. In the figure, we can see that for the number of 0 and 1 is equal, the entropy is the maximum. And the entropy is the minimum when all the bits are 0 or 1.
+And to calculate the properties in information theory later, we firstly made a bar plot of the entropy in 4-bits basis set to have more clear view. In the figure, we can see that when the numbers of 0 and 1 are equal, the entropy reaches the maximum. And the entropy is at the minimum when all the bits are 0 or 1.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_entropy.png"><p>4-Bits Entropy Bar Plot</p></div>
 
