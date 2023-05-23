@@ -13,7 +13,7 @@ In followings, I will introduce some basics concepts used in this project.
 ---
 
 <details>
-<summary>Details about Information and Entropy</summary>
+<summary>Details about important properties in information theory</summary>
 
 ### Information
 
@@ -67,8 +67,10 @@ where $p(x_i)$ is the probability of the $i$-th symbol in the data, and $p(y_j|x
 
 There is a relation between entropy, mutual information, and conditional entropy:
 
+<div id='eqn1'></div>
+
 $$
-I(X;Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)
+I(X;Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)\tag{1}
 $$
 
 ### 2. Encryption
@@ -122,7 +124,7 @@ We discuss above that the encryption is all about bit, or binary system. Now, if
 
 </details>
 
-To make it clear, we have to construct a function mapping the plaintext with the key to ciphertext as shwon in the following form:
+To make it clear, we can construct a function mapping the plaintext with the key to ciphertext as shown in the following form:
 
 $$
 f: \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace \times \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace \rightarrow \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace
@@ -132,7 +134,7 @@ which $f$ needs to satisfy the following properties:
 1. $f$ is a bijection.
 2. Ciphertext must correspond to every element in the basis set. That without the key, we cannot recover the plaintext.
 
-Given a 3 elements basis set $\lbrace A, B, C\rbrace$, we have $3!2! = 12$ possible encryption functions, one of them is:
+Given a 3-elements basis set $\lbrace A, B, C\rbrace$, we have $3!2! = 12$ possible encryption functions, one of them is:
 
 | $f$     | $A$ | $B$ | $C$ |
 | ------- | --- | --- | --- |
@@ -166,23 +168,35 @@ However, it has been proved that RSA is not quantum resistant, which means that 
 
 We constructed a 4-bits XOR cipher as an example to show how to calculate the entropy of the encrypted data, mutual information and conditional entropy to show the relation of plaintext, key and ciphertext. 
 
-In addition, to show the fractal structure of XOR encryption, we also constructed 10-bits and 7-bits XOR cipher.
+In addition, to show the fractal structure of XOR encryption, we also constructed 10-bits and 8-bits XOR cipher.
 
 The details of the methods can be found in the [entropy_of_encrypted.ipynb](./entropy_of_encrypted.ipynb).
 
 ## Results
 
-Firstly, we consider the 4-bits cipher. The following figure shows the ciphertext as the result of XOR operation between plaintext and key. We can see that the ciphertext is equally distributed to every element in the basis set.
+To start with the 4-bits cipher, the following figure shows the ciphertext as the result of XOR operation between plaintext and key. We can see that the ciphertext is equally distributed to every element in the basis set.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_cipher.png"><p>4-Bits Ciphertext Heat Map</p></div>
 
-And to calculate the properties of information theory in the following, we made a bar plot of the entropy in 4-bits basis set. In the figure, we can see that for the number of 0 and 1 is equal, the entropy is the maximum. And the entropy is the minimum when all the bits are 0 or 1.
+And to calculate the properties in information theory later, we firstly made a bar plot of the entropy in 4-bits basis set to have more clear view. In the figure, we can see that when the numbers of 0 and 1 are equal, the entropy reaches the maximum. And the entropy is at the minimum when all the bits are 0 or 1.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_entropy.png"><p>4-Bits Entropy Bar Plot</p></div>
 
 The entropy of the ciphertext is showed in the following figure. It turns into a four-fold symmetry instead of a fractal structure.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_cipher_entropy.png"><p>4-Bits Entropy of Ciphertext Heat Map</p></div>
+
+Then the mutual information between C, P and C, K are shown in the followings. We can see that they are a quarter turn to each other.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_icp.png"><img style="background: white;" src="./doc/png/4bits_ick.png"><p>4-Bits Mutual Information between C, P and C, K</p></div>
+
+With [Eqn. (1)](#eqn1), we can calculate the conditional entropy in the 4 kinds of relation. Let's see when the plaintext or key is known and how the conditional entropy that ciphertexts have. Based on the mutual information we get, there are cross-like pattern on it and have a quarter turn to each other.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_hcp.png"><img style="background: white;" src="./doc/png/4bits_hck.png"><p>Conditional Entropy of Ciphertext when Plaintext or Key is Known</p></div>
+
+And when the ciphertext is known, the conditional entropy of plaintext and key are shown in the followings. We can see that the conditional entropy of plaintext and key are the same, which means that the plaintext and key are independent to each other.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_hpc.png"><img style="background: white;" src="./doc/png/4bits_hkc.png"><p>Conditional Entropy of Plaintext and Key when Ciphertext is Known</p></div>
 
 
 
