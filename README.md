@@ -122,7 +122,7 @@ We discuss above that the encryption is all about bit, or binary system. Now, if
 
 </details>
 
-To make it clear, we can construct a function mapping the plaintext with the key to ciphertext as shwon in the following form:
+To make it clear, we can construct a function mapping the plaintext with the key to ciphertext as shown in the following form:
 
 $$
 f: \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace \times \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace \rightarrow \lbrace m_0, m_1, m_2, ..., m_{N-1}\rbrace
@@ -183,6 +183,10 @@ And to calculate the properties in information theory later, we firstly made a b
 The entropy of the ciphertext is showed in the following figure. It turns into a four-fold symmetry instead of a fractal structure.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_cipher_entropy.png"><p>4-Bits Entropy of Ciphertext Heat Map</p></div>
+
+Then the mutual information between C, P and C, K are shown in the followings.
+
+<div align="center"><img style="background: white;" src="./doc/png/4bits_icp.png"><img style="background: white;" src="./doc/png/4bits_ick.png"><p>4-Bits Mutual Information between C, P and C, K</p></div>
 
 
 
