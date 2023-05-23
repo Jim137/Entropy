@@ -174,6 +174,8 @@ The details of the methods can be found in the [entropy_of_encrypted.ipynb](./en
 
 ## Results
 
+*Note: the base of logarithm we used is 2 which represents the unit of entropy is bit.*
+
 To start with the 4-bits cipher, the following figure shows the ciphertext as the result of XOR operation between plaintext and key. We can see that the ciphertext is equally distributed to every element in the basis set.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_cipher.png"><p>4-Bits Ciphertext Heat Map</p></div>
