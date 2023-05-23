@@ -198,6 +198,17 @@ And when the ciphertext is known, the conditional entropy of plaintext and key a
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_hpc.png"><img style="background: white;" src="./doc/png/4bits_hkc.png"><p>Conditional Entropy of Plaintext and Key when Ciphertext is Known</p></div>
 
+And we can compare the average entropy of 4-bits cipher and 8-bits cipher. We assume that the probability of each states (bits combination) is the same, and we know that the entropy of binary distribution is in the interval of 0 and 1 bit. The result is shown in below table.
+
+| Bits  | $\langle H_{Basis}\rangle$ | $\langle H_{Cipher}\rangle$ | $\langle H(P\|C)\rangle$ = $\langle H(K\|C)\rangle$ |
+| :---: | :------------------------: | :-------------------------: | :-------------------------------------------------: |
+|   4   |           0.7806           |           0.7806            |                       0.5434                        |
+|   8   |           0.9024           |           0.9024            |                       0.7788                        |
+
+We found that for equidistributed keys, the average entropy of ciphertexts is same as the average entropy of basis set. However, once we know the ciphertext, the average entropy (conditional entropy) of plaintexts and keys will be lowered down.
+
+That sounds weird, since we encrypt the data, it should be more random and the entropy should be increased. But the result shows that the entropy of plaintext and key are decreased. The reason is that the plaintext should not be equidistributed! The plaintext we want to send must be meaningful and full of "information". Therefore, if we implement the random distributed key on it, it will make the ciphertext random instead keeping the regularity of plaintext, which results in the increase of the entropy of ciphertext from plaintext.
+
 
 
 ## References
