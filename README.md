@@ -186,7 +186,7 @@ The entropy of the ciphertext is showed in the following figure. It turns into a
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_cipher_entropy.png"><p>4-Bits Entropy of Ciphertext Heat Map</p></div>
 
-Then the mutual information between C, P and C, K are shown in the followings. We can see that they are a quarter turn to each other.
+Then the mutual information between C, P and C, K are shown in the followings. We can see that they are a quarter turn to each other. And also, the mutual information between C, P and C, K are small in most of the part, which means that the corelation between the ciphertext and the plaintext or key is weak.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_icp.png"><img style="background: white;" src="./doc/png/4bits_ick.png"><p>4-Bits Mutual Information between C, P and C, K</p></div>
 
@@ -194,7 +194,7 @@ With [Eqn. (1)](#eqn1), we can calculate the conditional entropy in the 4 kinds 
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_hcp.png"><img style="background: white;" src="./doc/png/4bits_hck.png"><p>Conditional Entropy of Ciphertext when Plaintext or Key is Known</p></div>
 
-And when the ciphertext is known, the conditional entropy of plaintext and key are shown in the followings. We can see that the conditional entropy of plaintext and key are the same, which means that the plaintext and key are independent to each other.
+And when the ciphertext is known, the conditional entropy of plaintext and key are shown in the followings. We can see that the conditional entropy of plaintext and key are the same, which means that the plaintext and the key are as well as hard to recover.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_hpc.png"><img style="background: white;" src="./doc/png/4bits_hkc.png"><p>Conditional Entropy of Plaintext and Key when Ciphertext is Known</p></div>
 
