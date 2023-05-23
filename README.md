@@ -154,7 +154,7 @@ $$
 p_i = f^{-1}(c_i, k_i) = a\cdot p_i + b\cdot k_i + c \mod N
 $$
 
-where we can see that $f = f^{1}$, in this case, $f$ is so-called symmetric encryption. 
+where we can see that $f = f^{-1}$, in this case, $f$ is so-called symmetric encryption. 
 
 To realized the perfect secrecy in this way, we need to have a [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) (OTP), which has been proved mathematically that it can achieve perfect secrecy and quantum resistance. However, it still have restrictions in the practical application, such as pre-shared key, key length, and key distribution (P.S. [Quantum Key Distribution](https://en.wikipedia.org/wiki/Quantum_key_distribution) (QKD) may be helpful in OTP.)
 
