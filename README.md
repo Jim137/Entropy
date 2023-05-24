@@ -17,7 +17,7 @@ In followings, I will introduce some basic concepts used in this project.
 
 [Information](https://en.wikipedia.org/wiki/Information) is a measure of the uncertainty of an outcome. It is related to the amount of data that is required to specify the outcome of an event. The more uncertain an outcome is, the more information is required to resolve uncertainty of the outcome.
 
-The information is calculated using the [Shannon information](https://en.wikipedia.org/wiki/Information_(measure)). Shannon information is defined as:
+The information is calculated using the [Shannon information](https://en.wikipedia.org/wiki/Information_content). Shannon information is defined as:
 
 <div align="center"><img style="background: white;" src="doc/svg/Do9eHEQh4T.svg"></div>
 
