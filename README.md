@@ -182,7 +182,7 @@ And to calculate the properties in information theory later, we firstly made a b
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_entropy.png"><p>4-Bits Entropy Bar Plot</p></div>
 
-The entropy of the ciphertext is showed in the following figure. It turns into a four-fold symmetry instead of a fractal structure.
+The entropy of the ciphertext is shown in the following figure. It turns into a four-fold symmetry instead of a fractal structure.
 
 <div align="center"><img style="background: white;" src="./doc/png/4bits_cipher_entropy.png"><p>4-Bits Entropy of Ciphertext Heat Map</p></div>
 
