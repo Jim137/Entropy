@@ -151,7 +151,7 @@ $$
 where $a, b, c$ are integers, $N$ is the number of elements in the basis set, $p_i$ is the plaintext, $k_i$ is the key, and $c_i$ is the ciphertext. And the decryption function is:
 
 $$
-p_i = f^{-1}(c_i, k_i) = a\cdot p_i + b\cdot k_i + c \mod N
+p_i = f^{-1}(c_i, k_i) = a\cdot c_i + b\cdot k_i + c \mod N
 $$
 
 where we can see that $f = f^{-1}$, in this case, $f$ is so-called symmetric encryption. 
