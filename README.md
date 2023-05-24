@@ -8,7 +8,7 @@ Entropy of encrypted data
 ## Introduction
 This is the final project for the course, "Math Methods for Physicists" in National Tsing Hua University. The goal of this project is to study the entropy of encrypted data. 
 
-In followings, I will introduce some basics concepts used in this project.
+In followings, I will introduce some basic concepts used in this project.
 
 ---
 
@@ -209,7 +209,8 @@ And we can compare the average entropy of 4-bits cipher and 8-bits cipher. We as
 
 We found that for equidistributed keys, the average entropy of ciphertexts is same as the average entropy of basis set. However, once we know the ciphertext, the average entropy (conditional entropy) of plaintexts and keys will be lowered down.
 
-That sounds weird, since we encrypt the data, it should be more random and the entropy should be increased. But the result shows that the entropy of plaintext and key are decreased. The reason is that the plaintext should not be equidistributed! The plaintext we want to send must be meaningful and full of "information". Therefore, if we implement the random distributed key on it, it will make the ciphertext random instead keeping the regularity of plaintext, which results in the increase of the entropy of ciphertext from plaintext.
+That sounds weird, since we encrypt the data, it should be more random and the entropy should be increased. But the result shows that the entropy of plaintext and key are decreased. The reason is that the plaintext should **NOT be equidistributed!** The plaintext we want to send must be meaningful and full of "information". Therefore, if we implement the random distributed key on it, it will make the ciphertext random instead keeping the regularity of plaintext, which results in the increase of the entropy of ciphertext from plaintext.
+
 
 
 
