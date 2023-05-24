@@ -1,8 +1,6 @@
 # Entropy
 Entropy of encrypted data
 
-**This project is WIP!**
-
 ##### *Disclaimer: Documentations in this project are partially written with the help of GPT.*
 
 ## Introduction
