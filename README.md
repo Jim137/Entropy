@@ -209,10 +209,19 @@ And we can compare the average entropy of 4-bits cipher and 8-bits cipher. We as
 
 We found that for equidistributed keys, the average entropy of ciphertexts is same as the average entropy of basis set. However, once we know the ciphertext, the average entropy (conditional entropy) of plaintexts and keys will be lowered down.
 
-That sounds weird, since we encrypt the data, it should be more random and the entropy should be increased. But the result shows that the entropy of plaintext and key are decreased. The reason is that the plaintext should **NOT be equidistributed!** The plaintext we want to send must be meaningful and full of "information". Therefore, if we implement the random distributed key on it, it will make the ciphertext random instead keeping the regularity of plaintext, which results in the increase of the entropy of ciphertext from plaintext.
+That sounds weird, since we encrypt the data, it should be more random and the entropy should be increased. But the result shows that the entropy of plaintext and key are decreased. The reason is that the plaintext should **NOT be equidistributed!** The plaintext we want to send must be meaningful and full of "information".
 
+On the other hand, what we discussed here is (multi-bits) single-char-encryption. In real case, we would send a sequence of chars instead of a single char. The average entropy we calculated here only represents the case that if we send a random plaintext with a random key in all the same probability.
 
+Therefore, if we implement the randomly distributed key on the "full-of-info" plaintext, it will make the ciphertext random instead keeping the regularity of plaintext, which results in the increase of the entropy of ciphertext from plaintext.
 
+## Conclusion
+
+Based on the results, we can conclude that the properties of a good encryption are as follows:
+
+1. The transformation map from plaintext and key to ciphertext must be equidistributed.<br>Since if the transformation map is not equidistributed, based on char frequency in each languages statistically, the eavesdropper can guess the plaintext from the ciphertext with frequency characteristic. 
+2. The key must be randomly distributed.<br>Since we want to make the conditional entropy between ciphertext and plaintext reach the maximum, and the mutual information between ciphertext and plaintext reach the minimum. As a result, the eavesdropper cannot get useful information from ciphertext without key.
+3. The order of the sequence of chars from plaintext to ciphertext must have a random permutation, and we also have to make the length of ciphertext into a given length instead of original length.<br>To satisfy confusion and diffusion, it can make the mutual information between ciphertext and plaintext lower, and the conditional entropy between ciphertext and plaintext higher. As a result, it will make the eavesdropper even harder to get useful information in the case that we use the same key and communicate multiple times.
 
 ## References
 
