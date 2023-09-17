@@ -154,7 +154,7 @@ $$
 
 where we can see that $f = f^{-1}$, in this case, $f$ is so-called symmetric encryption. 
 
-To realized the perfect secrecy in this way, we need to have a [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) (OTP), which has been proved mathematically that it can achieve perfect secrecy and quantum resistance. However, it still have restrictions in the practical application, such as pre-shared key, key length, and key distribution (P.S. [Quantum Key Distribution](https://en.wikipedia.org/wiki/Quantum_key_distribution) (QKD) may be helpful in OTP.)
+To realized the perfect secrecy in this way, we need to have a [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) (OTP), which has been proved mathematically that it can achieve perfect secrecy and quantum resistance. However, it still have restrictions in the practical application, **such** as pre-shared key, key length, and key distribution (P.S. [Quantum Key Distribution](https://en.wikipedia.org/wiki/Quantum_key_distribution) (QKD) may be helpful in OTP.)
 
 Nowadays, what we usually use in daily communication is the asymmetric encryption (as known as Public-key cryptography), such like [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)), [Elliptic Curve Cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) (ECC) and so on. In this case, we have two keys, one is public key, and the other is private key. The public key is used to encrypt the data, and the private key is used to decrypt the data. The public key is usually published to the public, and the private key is only known by the owner. 
 
@@ -228,3 +228,14 @@ Based on the results, we can conclude that the properties of a good encryption a
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Citation
+
+```
+@misc{Entropy2023,
+  author = "Jiun-Cheng Jiang",
+  title = "Entropy of encrypted data",
+  howpublished = "\url{https://github.com/Jim137/Entropy}",
+  year = "2023",
+  month = "May"
+}
