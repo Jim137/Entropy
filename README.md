@@ -1,7 +1,4 @@
-# Entropy
-Entropy of encrypted data
-
-##### *Disclaimer: Documentations in this project are partially written with the help of GPT.*
+# Entropy of Encrypted Data
 
 ## Introduction
 This is the final project for the course, "Math Methods for Physicists" in National Tsing Hua University. The goal of this project is to study the entropy of encrypted data. 
@@ -234,7 +231,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ```
 @misc{Entropy2023,
   author = "Jiun-Cheng Jiang",
-  title = "Entropy of encrypted data",
+  title = "Entropy of Encrypted Data",
   howpublished = "\url{https://github.com/Jim137/Entropy}",
   year = "2023",
   month = "May"
