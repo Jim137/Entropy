@@ -65,7 +65,7 @@ There is a relation between entropy, mutual information, and conditional entropy
 <div id='eqn1'></div>
 
 $$
-I(X;Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)\tag{1}
+I(X;Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)
 $$
 
 ### 2. Encryption
